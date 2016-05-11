@@ -1,0 +1,15 @@
+docker build res/auditor .
+docker run -d musician piano
+
+kill command
+docker stop $(docker ps -a -q)
+¨
+get binds
+sudo netstat -nl -p tcp
+
+delete <none> untagged images
+docker rmi -f $(docker images -a | grep "^<none>" | awk '{print $3}')
+
+get IP
+docker ps -> get id og container
+docker inspect -f '{{ .NetworkSettings.IPAddress }}' 94df4f0ce8a4
